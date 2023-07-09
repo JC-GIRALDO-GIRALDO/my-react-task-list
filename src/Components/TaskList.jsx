@@ -1,3 +1,5 @@
+import { FaCirclePlus } from "../../node_modules/react-icons/fa6";
+import Task from "./Task";
 export default function TaskList({ addList }) {
   const tasks = [addList];
 
@@ -11,5 +13,5 @@ export default function TaskList({ addList }) {
 }
 
 function TaskItem({ task }) {
-  return <li>{task}</li>;
+  return <li><Task></Task> {task}</li>;
 }
