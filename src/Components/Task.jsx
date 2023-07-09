@@ -7,11 +7,13 @@ export default function Task(){
     const crossOut = () => {
         setCrossOutTask(!crossOutTask);
         }
+
+        const buttonColor = crossOutTask ? "darkgreen" : "darkred";
     
 
     return <>
-    <button onFocus={crossOut}>{crossOutTask ? "b" : "a"} {/* Mostrar "b" si crossOutTask es true, de lo contrario, mostrar "a" */}
-        <FaBullseye /><FaBullseye/></button>
-
+    <button style={{color: buttonColor}} onClick={crossOut}> <FaBullseye/> 
+       </button>
+                
     </>
-}
+} 

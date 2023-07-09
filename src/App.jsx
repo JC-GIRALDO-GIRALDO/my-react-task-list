@@ -2,12 +2,11 @@ import "./App.css";
 import Header from "./Components/Header";
 import TaskList from "./Components/TaskList";
 import FormCreateList from "./Components/FormCreateList";
-import { FaCirclePlus } from "../node_modules/react-icons/fa6";
 
 function App() {
   return (
     <>
-      <div>
+      <div className="container">
         <header>
           <Header nameTaskList="Todo App"></Header>
 

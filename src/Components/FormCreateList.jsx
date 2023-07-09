@@ -6,7 +6,6 @@ export default function FormCreateList() {
         <input type="text" placeholder="Add your new todo" />
         <button type="submit">
           <FaCirclePlus />
-          {/*notas para programar */}
         </button>
       </form>
     </>
