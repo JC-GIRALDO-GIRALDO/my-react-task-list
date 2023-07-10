@@ -1,14 +1,14 @@
 .container {
-width: 500px;
-margin: 3rem auto;
-border-radius: 10px;
-border-style: groove;
-border-width: 4px;
-display: grid;
-grid-template-rows: auto auto;
+  width: 500px;
+  margin: 3rem auto;
+  border-radius: 10px;
+  border-style: groove;
+  border-width: 4px;
+  display: grid;
+  grid-template-rows: auto auto;
 }
-header{
-  margin: 0.3rem ;
+header {
+  margin: 0.3rem;
   text-align: center;
   border-radius: 5px;
   border-style: groove;
@@ -17,43 +17,60 @@ header h2 {
   font-size: 40px;
   margin: 0.5rem;
   text-align: start;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 header form {
   margin: 0 auto;
   width: 95%;
   height: 25px;
-  
+
   display: grid;
   grid-template-columns: 80% 10%;
 }
-header form input{
-background-color: rgba(0, 0, 0, 0.9);
-border-radius: 5px;
+header form input {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
 }
-header form input::placeholder{
+header form input::placeholder {
   color: rgba(255, 255, 255, 0.9);
-  }
-header form button{
-font-size: 18px;
-background-color: transparent;
-border: none;
-color: darkred;
-padding: 0;
-margin: 0;
-}  
-ul {
+}
+header form button {
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  color: darkred;
+  padding: 0;
+  margin: 0;
+}
+section {
+  margin: 0.3rem;
+  border-radius: 5px;
+  border-style: groove;
+}
+section button {
+  background-color: transparent;
+  border: none;
+  padding: 2px 2px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+section button:active {
+  transform: scale(0.95);
+}
+section ul {
   background-color: rgba(0, 0, 0, 0.9);
   margin: 0.2rem auto;
   padding: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-li {
+section li {
   font-size: 0.7em;
   color: rgba(255, 255, 255, 0.9);
   list-style-type: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-button {
-  background-color: transparent;
-}
-
