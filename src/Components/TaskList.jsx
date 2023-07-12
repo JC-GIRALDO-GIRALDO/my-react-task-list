@@ -1,4 +1,5 @@
 import Task from "./Task"; // Task = hijo
+import { FaRegTrashCan, FaPen } from "../../node_modules/react-icons/fa6";
 export default function TaskList({ addList }) {
   const tasks = [addList]; // Array de tareas generadas
 
@@ -17,9 +18,14 @@ export default function TaskList({ addList }) {
   del map y convierte en lista */
 function TaskItem({ task }) {
   return (
-    <li>
-      {" "}
-      <Task></Task> {task} {/* Componente hijo (boton) + lista  */}
-    </li>
+    <div className="listComplete">
+      <li>
+        {" "}
+        <Task></Task> {task}
+        {/* Componente hijo (boton) + lista  */}
+      </li>
+      <FaPen className="editar" />
+      <FaRegTrashCan className="borrar" />
+    </div>
   );
 }
