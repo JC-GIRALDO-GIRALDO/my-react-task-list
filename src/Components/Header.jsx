@@ -1,5 +1,5 @@
 {
-  /*Nombre App */
+  /* Componente con el Nombre App */
 }
 export default function Header({ nameTaskList }) {
   return (

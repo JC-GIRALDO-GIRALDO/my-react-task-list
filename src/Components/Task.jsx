@@ -1,25 +1,37 @@
-import { FaBullseye, FaCheck } from "../../node_modules/react-icons/fa6";
-import { useState } from "react";
-export default function Task() {
-  // genero una constante con useState en false
-  const [crossOutTask, setCrossOutTask] = useState(false);
+import React from "react";
+import usePersistentState from "./usePersistentState";
+import FormCreateList from "./FormCreateList";
+import TaskList from "./TaskList";
 
-  const crossOut = () => {
-    setCrossOutTask(!crossOutTask); // Cambia el valor del estado
+/* Este componente se encarga de gestionar una colección 
+de listas de tareas*/
+
+export default function Task() {
+  const [lists, setLists] = usePersistentState("lists", []);
+
+  // Agregar una nueva lista a la colección
+  const addList = (list) => {
+    setLists([...lists, list]);
   };
 
-  /* genero una constante con un operador ternario 
-     que al cambiar de estado cambiar de color */
-  const buttonColor = crossOutTask ? "darkgreen" : "darkgoldenrod";
+  // Borrar una lista de la colección
+  const deleteList = (index) => {
+    const updatedLists = [...lists];
+    updatedLists.splice(index, 1);
+    setLists(updatedLists);
+  };
+
+  // Editar una lista de la colección
+  const editList = (index, newName) => {
+    const updatedLists = [...lists];
+    updatedLists[index] = newName;
+    setLists(updatedLists);
+  };
 
   return (
-    <>
-      {/* Retorno botón con valor de operador ternario  */}
-      <button style={{ color: buttonColor }} onClick={crossOut}>
-        <FaBullseye />
-      </button>
-      {/* Función para unir botón más estilo  */}
-      {crossOutTask && <FaCheck style={{ marginLeft: "5px" }} />}
-    </>
+    <div>
+      <FormCreateList addList={addList} />
+      <TaskList lists={lists} deleteList={deleteList} editList={editList} />
+    </div>
   );
 }
