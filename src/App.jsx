@@ -1,22 +1,19 @@
 import "./App.css";
 import Header from "./Components/Header";
-import TaskList from "./Components/TaskList";
-import FormCreateList from "./Components/FormCreateList";
+import Task from "./Components/Task";
 
 function App() {
   return (
     <>
+      {/* Contenedor en el cual está toda la aplicación */}
       <div className="container">
         <header>
-          <Header nameTaskList="App Task List"></Header>
-
-          <FormCreateList></FormCreateList>
+          {/*  Componente con el nombre de la aplicación  */}
+          <Header nameTaskList="To-do list" />
         </header>
         <section>
-          <TaskList addList="Buy a new gaming laptop"></TaskList>
-          <TaskList addList="Complete a previous task"></TaskList>
-          <TaskList addList="Create video for YouTube"></TaskList>
-          <TaskList addList="Create a new portfolio site"></TaskList>
+          {/*  Componente padre de lista de tareas   */}
+          <Task />
         </section>
       </div>
     </>
