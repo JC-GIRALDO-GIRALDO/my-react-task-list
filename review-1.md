@@ -1,36 +1,30 @@
-# Hola!
+# ¡Buenos días!
 
-## Cordial saludo!
+## Mi nombre es Juan Camilo Giraldo, y soy Desarrollador Junior Full Stack MERN.
 
-- Mi nombre es, Juan Camilo Giraldo, Desarrollador junior
-  full Stack MERN.
-
-- El dia de hoy vengo a presentar, TaskList - Tu Gestor de Tareas en React
-  TaskList es La solución perfecta para organizar y gestionar tus tareas diarias de manera eficiente y sin complicaciones. TaskList es una aplicación web
-  desarrollada en React, diseñada pensando en la simplicidad y la usabilidad para usuarios de todos los niveles.
+Hoy tengo el gusto de presentarles "TaskList", una aplicación web desarrollada en React, diseñada para organizar y gestionar tareas diarias de manera
+eficiente y sin complicaciones.
 
 - ¿Qué es TaskList y para qué sirve?
 
-  1. TaskList es una herramienta que te permite crear y administrar listas de tareas personalizadas. Con TaskList, puedes crear una lista de tareas para
-     cualquier proyecto o actividad, y marcar las tareas completadas a medida que las vayas terminando. Es como tu lista de tareas en papel, pero mejor
-     más organizada.
+TaskList es una herramienta que permite crear y administrar listas de tareas personalizadas. Con esta aplicación, pueden crear una lista de tareas para
+cualquier proyecto o actividad y marcar las tareas completadas a medida que las vayan terminando, proporcionando una experiencia similar a tener una
+lista de tareas en papel, pero de una manera mucho más organizada y accesible.
 
 - Funcionalidades clave y ventajas
 
-  1. Creación y Edición de Tareas Intuitiva: Con TaskList, puedes agregar tareas fácilmente. Además, editar y actualizar tus tareas.
-  2. Marcado de Tareas Completadas: A medida que vayas completando tus tareas, simplemente marca la casilla correspondiente, y TaskList lo registrará para
-     ti.
-  3. Gestión de Listas Personalizadas: TaskList te permite crear múltiples listas de tareas para diferentes proyectos o áreas de tu vida. ¡Organiza tus
-     tareas como mejor te convenga!
-  4. Fácil de Usar para Todos: No necesitas ser un experto en tecnología para utilizar TaskList. Su interfaz simple y amigable hace que sea accesible para
-     cualquier usuario.
-  5. Visualización Clara y Ordenada: Con la disposición clara de tus tareas y el uso de íconos reconocibles, te resultará sencillo encontrar y entender tu
-     lista de tareas.
-  6. Guardado Automático: TaskList guarda automáticamente tus cambios, así que no te preocupes por perder tu progreso. ¡Todo se mantendrá seguro y
-     actualizado!
+  1.  TaskList ofrece una forma sencilla y directa de agregar y editar tareas, lo que facilita la gestión de cualquier proyecto.
+  2.  A medida que completen sus tareas, solo deben marcar la casilla correspondiente, y TaskList automáticamente lo registrará.
+  3.  TaskList brinda la flexibilidad de crear múltiples listas de tareas para diferentes proyectos o áreas de la vida, permitiendo a los usuarios
+      mantener todo organizado según sus necesidades.
+  4.  Una ventaja fundamental de TaskList es su interfaz simple y amigable, diseñada para ser utilizada por usuarios de todos los niveles de experiencia
+      en tecnología.
+  5.  Las tareas se presentan de forma clara y con íconos reconocibles, lo que facilita encontrar y entender la lista de tareas.
+  6.  TaskList guarda automáticamente los cambios realizados, lo que brinda tranquilidad a los usuarios al saber que su progreso estará seguro y  
+      actualizado.
 
 - ¿Por qué los usuarios eligen TaskList?
 
-  1. Facilita la Organización: TaskList te permite estructurar tus tareas y proyectos de manera lógica y organizada, evitando la confusión y el olvido.
-  2. Ahorra Tiempo y Energía: Con una gestión más eficiente de tus tareas, podrás ahorrar tiempo y energía, concentrándote en lo que realmente importa.
-  3. Mejora la Productividad: Al mantener tus tareas en orden y seguir tu progreso, TaskList te ayudará a ser más productivo y cumplir tus objetivos.
+  1.  TaskList ayuda a estructurar tareas y proyectos de manera lógica y ordenada, evitando confusiones y olvidos.
+  2.  Gracias a una gestión más eficiente de tareas, los usuarios pueden ahorrar tiempo y concentrarse en lo que realmente importa.
+  3.  Al mantener sus tareas en orden y hacer seguimiento de su progreso, TaskList contribuye a una mayor productividad y logro de objetivos.
