@@ -1,7 +1,7 @@
 export default function ClearAllListsButton({ clearAllLists }) {
   return (
     <div>
-      <p>Borrar todas las listas generadas:</p>
+      <p>Delete all generated tasks</p>
       <button onClick={clearAllLists}>Clear All</button>
     </div>
   );
