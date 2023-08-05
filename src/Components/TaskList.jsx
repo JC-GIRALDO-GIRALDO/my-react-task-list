@@ -1,86 +1,110 @@
 import React, { useState } from "react";
-import { FaCheck, FaPen, FaTrashAlt } from "../../node_modules/react-icons/fa";
+import {
+  FaCheckSquare,
+  FaPen,
+  FaTrashAlt,
+  FaWindowClose,
+} from "react-icons/fa";
 
-function TaskList({ lists, deleteList, editList }) {
-  const [editedIndex, setEditedIndex] = useState(-1); //índice de la lista actualmente en modo de edición
-  const [editedName, setEditedName] = useState(""); //el nombre de la lista que está siendo editada
-  const [selectedLists, setSelectedLists] = useState([]); // contiene los índices de las listas seleccionadas (marcadas con el checkbox)
+const strikeThrough = (text) => {
+  return text
+    .split("")
+    .map((char) => char + "\u0336")
+    .join("");
+};
 
-  //se activa cuando cambia el valor del campo de entrada mientras se edita una lista
+export default function TaskList({ lists, deleteList, editList }) {
+  const [editedList, setEditedList] = useState(null);
+  const [editedName, setEditedName] = useState("");
+  const [selectedLists, setSelectedLists] = useState([]);
+
   const handleEditInputChange = (event) => {
     setEditedName(event.target.value);
   };
 
-  //Llama a la función editList pasándole el índice de la lista a editar y el nuevo nombre
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
-    editList(editedIndex, editedName);
-    setEditedIndex(-1);
-    setEditedName("");
-  };
-
-  //Pone en modo de edición la lista correspondiente, actualizando los estados
-  const startEditing = (index, name) => {
-    setEditedIndex(index);
-    setEditedName(name);
-  };
-
-  //se activa cuando se hace clic en el checkbox de una lista
-  const handleSelectToggle = (index) => {
-    if (selectedLists.includes(index)) {
-      setSelectedLists(selectedLists.filter((item) => item !== index));
-    } else {
-      setSelectedLists([...selectedLists, index]);
+    if (editedList) {
+      editList(editedList.id, editedName);
+      setEditedList(null);
+      setEditedName("");
     }
+  };
+
+  const startEditing = (list) => {
+    setEditedList(list);
+    setEditedName(list.name);
+  };
+
+  const handleSelectToggle = (id) => {
+    setSelectedLists((prevSelected) =>
+      prevSelected.includes(id)
+        ? prevSelected.filter((item) => item !== id)
+        : [...prevSelected, id]
+    );
   };
 
   return (
     <div>
       {lists.length === 0 ? (
-        <p>Enter a task to get started</p>
+        <p>No tasks generated</p>
       ) : (
-        <>
-          <p>List of generated tasks</p>
-          <hr />
-          <ul>
-            {lists.map((list, index) => (
-              <li key={index}>
-                {editedIndex === index ? (
-                  <form onSubmit={handleEditFormSubmit}>
-                    <input
-                      type="text"
-                      value={editedName}
-                      onChange={handleEditInputChange}
-                    />
-                    <button type="submit">
-                      <FaCheck className="icons" />
-                    </button>
-                    <button onClick={() => setEditedIndex(-1)}>Cancelar</button>
-                  </form>
-                ) : (
-                  <>
-                    <input
-                      className="checkbox"
-                      type="checkbox"
-                      checked={selectedLists.includes(index)}
-                      onChange={() => handleSelectToggle(index)}
-                    />
-                    {list}
-                    <button onClick={() => startEditing(index, list)}>
-                      <FaPen className="icons" />
-                    </button>
-                    <button onClick={() => deleteList(index)}>
-                      <FaTrashAlt className="icons" />
-                    </button>
-                  </>
-                )}
-              </li>
-            ))}
-          </ul>
-        </>
+        <p>List of generated tasks</p>
       )}
+      <hr />
+      <ul>
+        {lists.map((list) => (
+          <li key={`task_${list.id}`}>
+            {editedList && editedList.id === list.id ? (
+              <form onSubmit={handleEditFormSubmit}>
+                <input
+                  type="text"
+                  value={editedName}
+                  onChange={handleEditInputChange}
+                />
+                <div className="edit">
+                  <button type="submit" className="icons">
+                    <FaCheckSquare />
+                  </button>
+                  <button onClick={() => setEditedList(null)} className="icons">
+                    <FaWindowClose />
+                  </button>
+                </div>
+              </form>
+            ) : (
+              <>
+                <div className="part1">
+                  <input
+                    className="checkbox"
+                    type="checkbox"
+                    checked={selectedLists.includes(list.id)}
+                    onChange={() => handleSelectToggle(list.id)}
+                  />
+                  <span
+                    style={
+                      selectedLists.includes(list.id)
+                        ? { textDecoration: "line-through" }
+                        : {}
+                    }
+                  >
+                    {selectedLists.includes(list.id)
+                      ? strikeThrough(list.name)
+                      : list.name}
+                  </span>
+                </div>
+                <div className="part2">
+                  <button onClick={() => startEditing(list)} className="icons">
+                    <FaPen />
+                  </button>
+                  <button onClick={() => deleteList(list.id)} className="icons">
+                    <FaTrashAlt />
+                  </button>
+                </div>
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
-
-export default TaskList;
