@@ -100,6 +100,11 @@ export default function TaskList({ lists, deleteList, editList }) {
                     <FaTrashAlt />
                   </button>
                 </div>
+                <div className="description">
+                  <p>
+                    <span>{list.description}</span>
+                  </p>
+                </div>
               </>
             )}
           </li>

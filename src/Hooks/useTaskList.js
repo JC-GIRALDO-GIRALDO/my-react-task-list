@@ -5,10 +5,11 @@ import usePersistentState from "../Context/usePersistentState";
 export default function useTaskList() {
   const [lists, setLists] = usePersistentState("lists", []);
 
-  const addList = (listName) => {
+  const addList = (listName, listDescription) => {
     const newList = {
       id: uuidv4(),
       name: listName,
+      description: listDescription,
       tasks: [],
     };
     setLists([...lists, newList]);
@@ -20,7 +21,7 @@ export default function useTaskList() {
   };
 
   const deleteAllLists = () => {
-    setLists([]); // Eliminar todas las listas estableciendo el estado como un arreglo vacío
+    setLists([]);
   };
 
   const editList = (id, newName) => {
@@ -35,6 +36,6 @@ export default function useTaskList() {
     addList,
     deleteList,
     editList,
-    deleteAllLists, // Agregamos la función para borrar todas las listas
+    deleteAllLists,
   };
 }
