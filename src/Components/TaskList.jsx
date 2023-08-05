@@ -96,7 +96,10 @@ export default function TaskList({ lists, deleteList, editList }) {
                   <button onClick={() => startEditing(list)} className="icons">
                     <FaPen />
                   </button>
-                  <button onClick={() => deleteList(list.id)} className="icons">
+                  <button
+                    onClick={() => deleteList(list.id)}
+                    className="icons1"
+                  >
                     <FaTrashAlt />
                   </button>
                 </div>
