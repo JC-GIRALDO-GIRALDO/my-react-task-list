@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-// Hook personalizado para manejar el almacenamiento persistente en localStorage
-function usePersistentState(key, initialState) {
+export default function usePersistentState(key, initialState) {
   const [state, setState] = useState(() => {
     const storedState = localStorage.getItem(key);
     return storedState ? JSON.parse(storedState) : initialState;
@@ -13,5 +12,3 @@ function usePersistentState(key, initialState) {
 
   return [state, setState];
 }
-
-export default usePersistentState;
