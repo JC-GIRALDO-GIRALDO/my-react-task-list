@@ -1,18 +1,12 @@
 import React from "react";
 import "./App.css";
-import Header from "./Components/Header";
-import Task from "./Components/Task";
+import Menu from "./Components/Menu";
 
 function App() {
   return (
-    <div className="container">
-      <header>
-        <Header nameTaskList="To-do list" />
-      </header>
-      <section>
-        <Task />
-      </section>
-    </div>
+    <>
+      <Menu />
+    </>
   );
 }
 
