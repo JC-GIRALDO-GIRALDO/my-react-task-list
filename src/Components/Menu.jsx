@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import SobreNosotros from "../pages/SobreNosotros";
 import Tareas from "../pages/Tareas";
 import Header from "./Header";
+import DarkLight from "./DarkLight";
 
 function Menu() {
   return (
@@ -15,6 +16,7 @@ function Menu() {
           <Link to="/">Home</Link>
           <Link to="SobreNosotros">Sobre Nosotros</Link>
           <Link to="Tareas">Tareas</Link>
+          <DarkLight />
         </div>
       </div>
 
