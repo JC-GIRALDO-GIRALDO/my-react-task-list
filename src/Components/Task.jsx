@@ -6,16 +6,21 @@ import ClearAllListsButton from "./ClearAllListsButton";
 
 export default function Task() {
   const taskList = useTaskList();
-
   return (
     <div>
       <FormCreateList addList={taskList.addList} />
-      <TaskList
-        lists={taskList.lists}
-        deleteList={taskList.deleteList}
-        editList={taskList.editList}
+      <div className="task-list">
+        <TaskList
+          lists={taskList.lists}
+          deleteList={taskList.deleteList}
+          editList={taskList.editList}
+          toggleCheckbox={taskList.toggleCheckbox}
+        />
+      </div>
+      <ClearAllListsButton
+        clearAllLists={taskList.deleteAllLists}
+        totalLists={taskList.totalLists}
       />
-      <ClearAllListsButton clearAllLists={taskList.deleteAllLists} />
     </div>
   );
 }

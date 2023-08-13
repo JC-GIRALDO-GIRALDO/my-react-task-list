@@ -1,7 +1,9 @@
-export default function ClearAllListsButton({ clearAllLists }) {
+import React from "react";
+
+export default function ClearAllListsButton({ clearAllLists, totalLists }) {
   return (
     <div className="clearAll">
-      <p>Delete all generated tasks</p>
+      <p>you have {totalLists} pending tasks</p>
       <button onClick={clearAllLists}>Clear All</button>
     </div>
   );
