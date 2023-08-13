@@ -11,12 +11,20 @@ const useTaskList = () => {
       name: listName,
       description: listDescription,
       tasks: [],
+      checked: false, // Nuevo estado del checkbox
     };
     setLists([...lists, newList]);
   };
 
   const deleteList = (id) => {
     const updatedLists = lists.filter((list) => list.id !== id);
+    setLists(updatedLists);
+  };
+
+  const toggleCheckbox = (id) => {
+    const updatedLists = lists.map((list) =>
+      list.id === id ? { ...list, checked: !list.checked } : list
+    );
     setLists(updatedLists);
   };
 
@@ -31,13 +39,14 @@ const useTaskList = () => {
     setLists(updatedLists);
   };
 
-  const totalLists = lists.length; // Calcular el total de listas
+  const totalLists = lists.length;
 
   return {
     lists,
     totalLists,
     addList,
     deleteList,
+    toggleCheckbox,
     editList,
     deleteAllLists,
   };

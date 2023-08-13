@@ -1,4 +1,5 @@
 .container {
+  max-height: auto;
   width: 250px;
   margin: 3rem auto;
   border-radius: 10px;
@@ -60,6 +61,7 @@ form button .icons {
 }
 
 section {
+  height: 250px;
   max-width: 241px;
   margin: 0.2rem;
   border-radius: 5px;
@@ -80,6 +82,7 @@ section p {
   margin-left: 2px;
 }
 section hr {
+  height: 2px;
   margin: 0;
 }
 section ul {
@@ -158,4 +161,12 @@ textarea::placeholder {
   background-color: firebrick;
   font-size: 10px;
   margin: auto;
+}
+.task-list {
+  max-height: 150px;
+  overflow-y: hidden;
+}
+
+.task-list:hover {
+  overflow-y: auto;
 }

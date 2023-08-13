@@ -13,7 +13,12 @@ const strikeThrough = (text) => {
     .join("");
 };
 
-export default function TaskList({ lists, deleteList, editList }) {
+export default function TaskList({
+  lists,
+  deleteList,
+  editList,
+  toggleCheckbox,
+}) {
   const [editedList, setEditedList] = useState(null);
   const [editedName, setEditedName] = useState("");
   const [selectedLists, setSelectedLists] = useState([]);
@@ -77,19 +82,15 @@ export default function TaskList({ lists, deleteList, editList }) {
                   <input
                     className="checkbox"
                     type="checkbox"
-                    checked={selectedLists.includes(list.id)}
-                    onChange={() => handleSelectToggle(list.id)}
+                    checked={list.checked}
+                    onChange={() => toggleCheckbox(list.id)}
                   />
                   <span
                     style={
-                      selectedLists.includes(list.id)
-                        ? { textDecoration: "line-through" }
-                        : {}
+                      list.checked ? { textDecoration: "line-through" } : {}
                     }
                   >
-                    {selectedLists.includes(list.id)
-                      ? strikeThrough(list.name)
-                      : list.name}
+                    {list.checked ? strikeThrough(list.name) : list.name}
                   </span>
                 </div>
                 <div className="part2">

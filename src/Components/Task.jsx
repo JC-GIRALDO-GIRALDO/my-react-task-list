@@ -1,3 +1,4 @@
+// Task.jsx (Actualizado)
 import React from "react";
 import FormCreateList from "./FormCreateList";
 import TaskList from "./TaskList";
@@ -10,11 +11,14 @@ export default function Task() {
   return (
     <div>
       <FormCreateList addList={taskList.addList} />
-      <TaskList
-        lists={taskList.lists}
-        deleteList={taskList.deleteList}
-        editList={taskList.editList}
-      />
+      <div className="task-list">
+        <TaskList
+          lists={taskList.lists}
+          deleteList={taskList.deleteList}
+          editList={taskList.editList}
+          toggleCheckbox={taskList.toggleCheckbox}
+        />
+      </div>
       <ClearAllListsButton
         clearAllLists={taskList.deleteAllLists}
         totalLists={taskList.totalLists}
