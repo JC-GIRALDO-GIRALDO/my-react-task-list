@@ -17,6 +17,7 @@ export default function Task() {
           toggleCheckbox={taskList.toggleCheckbox}
         />
       </div>
+
       <ClearAllListsButton
         clearAllLists={taskList.deleteAllLists}
         totalLists={taskList.totalLists}
