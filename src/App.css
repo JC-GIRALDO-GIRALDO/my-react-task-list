@@ -182,10 +182,14 @@ textarea::placeholder {
 }
 .nameLink {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   text-align: center;
 }
 .nameLink a {
   color: antiquewhite;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.darkLight button {
+  width: 10px;
+  height: 20px;
 }
