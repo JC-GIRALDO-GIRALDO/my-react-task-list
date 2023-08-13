@@ -15,7 +15,10 @@ export default function Task() {
         deleteList={taskList.deleteList}
         editList={taskList.editList}
       />
-      <ClearAllListsButton clearAllLists={taskList.deleteAllLists} />
+      <ClearAllListsButton
+        clearAllLists={taskList.deleteAllLists}
+        totalLists={taskList.totalLists}
+      />
     </div>
   );
 }

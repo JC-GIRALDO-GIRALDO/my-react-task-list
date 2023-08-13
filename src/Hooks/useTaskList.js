@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import usePersistentState from "../Context/usePersistentState";
 
-export default function useTaskList() {
+const useTaskList = () => {
   const [lists, setLists] = usePersistentState("lists", []);
 
   const addList = (listName, listDescription) => {
@@ -31,11 +31,16 @@ export default function useTaskList() {
     setLists(updatedLists);
   };
 
+  const totalLists = lists.length; // Calcular el total de listas
+
   return {
     lists,
+    totalLists,
     addList,
     deleteList,
     editList,
     deleteAllLists,
   };
-}
+};
+
+export default useTaskList;
