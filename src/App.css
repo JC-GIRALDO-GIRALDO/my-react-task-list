@@ -122,7 +122,7 @@ section li {
 }
 .icons {
   width: 10px;
-  margin-left: 3px; /* Adjust the margin as needed */
+  margin-left: 3px;
   color: darkorange;
 }
 .icons1 {
@@ -175,21 +175,77 @@ textarea::placeholder {
   grid-template-rows: auto auto;
 }
 .nameAppMenu {
-  font-size: 25px;
+  margin: 1rem;
+  font-size: 45px;
   text-align: center;
-  color: antiquewhite;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .nameLink {
+  margin: 1rem auto;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  text-align: center;
+  grid-template-columns: auto auto;
 }
 .nameLink a {
-  color: antiquewhite;
+  font-size: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.darkLight button {
-  width: 10px;
+
+.darkLight {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 0.5rem 1rem;
+  width: 15px;
   height: 20px;
+}
+.home {
+  height: 850px;
+}
+.home h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: darkcyan;
+  padding: 0;
+  margin: 2rem;
+  font-size: 30px;
+}
+.home p {
+  padding: 0;
+  margin: 2rem;
+  font-size: 20px;
+}
+.sobreNosotros {
+  height: 850px;
+}
+.sobreNosotros h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: darkcyan;
+  padding: 0;
+  margin: 2rem;
+  font-size: 30px;
+}
+.sobreNosotros p {
+  padding: 0;
+  margin: 2rem;
+  font-size: 20px;
+}
+.sobreNosotros ol {
+  padding: 0;
+  margin: 2rem;
+}
+.sobreNosotros h3 {
+  padding: 0;
+  font-size: 20px;
+}
+.sobreNosotros li {
+  margin-left: 3rem;
+  font-size: 20px;
+}
+.tareas {
+  height: 850px;
+}
+.nameTareas {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: darkcyan;
+  padding: 0;
+  margin: 2rem;
+  font-size: 30px;
 }

@@ -4,6 +4,12 @@ import SobreNosotros from "../pages/SobreNosotros";
 import Tareas from "../pages/Tareas";
 import Header from "./Header";
 import DarkLight from "./DarkLight";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from "@chakra-ui/react";
 
 function Menu() {
   return (
@@ -13,10 +19,31 @@ function Menu() {
           <Header nameTaskList="Task-List" />
         </div>
         <div className="nameLink">
-          <Link to="/">Home</Link>
-          <Link to="SobreNosotros">Sobre Nosotros</Link>
-          <Link to="Tareas">Tareas</Link>
-          <DarkLight />
+          <Breadcrumb fontWeight="medium" fontSize="sm">
+            <BreadcrumbItem>
+              <Link to="/" style={{ marginRight: "10px" }}>
+                Home
+              </Link>
+            </BreadcrumbItem>
+            <span style={{ margin: "0 10px" }}>/</span>
+            <BreadcrumbItem>
+              <Link
+                to="SobreNosotros"
+                style={{ marginLeft: "10px", marginRight: "10px" }}
+              >
+                Sobre Nosotros
+              </Link>
+            </BreadcrumbItem>
+            <span style={{ margin: "0 10px" }}>/</span>
+            <BreadcrumbItem>
+              <Link to="Tareas" style={{ marginLeft: "10px" }}>
+                Tareas
+              </Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <DarkLight />
+            </BreadcrumbItem>
+          </Breadcrumb>
         </div>
       </div>
 

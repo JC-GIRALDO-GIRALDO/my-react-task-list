@@ -4,13 +4,16 @@ function Tareas() {
   return (
     <>
       <hr />
-      <div className="container">
-        <header>
-          <Header nameTaskList="To-do list" />
-        </header>
-        <section>
-          <Task />
-        </section>
+      <div className="tareas">
+        <h2 className="nameTareas">Realiza tus tareas</h2>
+        <div className="container">
+          <header>
+            <Header nameTaskList="To-do list" />
+          </header>
+          <section>
+            <Task />
+          </section>
+        </div>
       </div>
     </>
   );
