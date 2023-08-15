@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaPlusSquare } from "react-icons/fa";
+import { AddIcon } from "@chakra-ui/icons";
+import { Input, Textarea, Button, Alert, AlertIcon } from "@chakra-ui/react";
 
 export default function FormCreateList({ addList }) {
   const [values, setValues] = useState({ name: "", description: "" });
@@ -31,7 +32,11 @@ export default function FormCreateList({ addList }) {
   return (
     <form onSubmit={handleForm}>
       <div className="formPart1">
-        <input
+        <Input
+          fontSize="25px"
+          _placeholder={{ fontSize: "30px" }}
+          width="470px"
+          height="55px"
           type="text"
           name="name"
           value={values.name || ""}
@@ -39,13 +44,27 @@ export default function FormCreateList({ addList }) {
           onChange={handleInputChange}
         />
 
-        <button type="submit">
-          <FaPlusSquare className="icons" />
-        </button>
+        <Button
+          type="submit"
+          width="55%"
+          margin="0 auto"
+          height="45px"
+          variant="outline"
+          backgroundColor="blue.400"
+        >
+          <AddIcon />
+        </Button>
       </div>
       <div className="formPart2">
-        {errors.name && <span className="error">{errors.name}</span>}
-        <textarea
+        {errors.name && (
+          <Alert status="error">
+            <AlertIcon />
+            {errors.name}
+          </Alert>
+        )}
+        <Textarea
+          fontSize="25px"
+          _placeholder={{ fontSize: "30px" }}
           name="description"
           value={values.description || ""}
           placeholder="Add task description..."

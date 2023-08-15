@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import {
-  FaCheckSquare,
-  FaPen,
-  FaTrashAlt,
-  FaWindowClose,
-} from "react-icons/fa";
+import { EditIcon, DeleteIcon, CloseIcon, CheckIcon } from "@chakra-ui/icons";
+import { Text, Divider, Checkbox, Button, Input } from "@chakra-ui/react";
 
 const strikeThrough = (text) => {
   return text
@@ -52,28 +48,44 @@ export default function TaskList({
   return (
     <div>
       {lists.length === 0 ? (
-        <p>No tasks generated</p>
+        <Text fontSize="2xl">No tasks generated</Text>
       ) : (
-        <p>List of generated tasks</p>
+        <Text fontSize="2xl">List of generated tasks</Text>
       )}
-      <hr />
-      <ul>
+      <Divider height="2px" />
+      <div className="taskList">
         {lists.map((list) => (
-          <li key={`task_${list.id}`}>
+          <h2 key={`task_${list.id}`}>
             {editedList && editedList.id === list.id ? (
-              <form onSubmit={handleEditFormSubmit}>
-                <input
+              <form className="formEdit" onSubmit={handleEditFormSubmit}>
+                <Input
+                  height="60px"
+                  width="100%"
                   type="text"
                   value={editedName}
                   onChange={handleEditInputChange}
                 />
                 <div className="edit">
-                  <button type="submit" className="icons">
-                    <FaCheckSquare />
-                  </button>
-                  <button onClick={() => setEditedList(null)} className="icons">
-                    <FaWindowClose />
-                  </button>
+                  <Button
+                    margin="auto 0.5rem"
+                    fontSize="30px"
+                    colorScheme="whatsapp"
+                    variant="outline"
+                    type="submit"
+                    className="icons"
+                  >
+                    <CheckIcon />
+                  </Button>
+                  <Button
+                    margin="auto 1rem"
+                    fontSize="25px"
+                    colorScheme="red"
+                    variant="outline"
+                    onClick={() => setEditedList(null)}
+                    className="icons"
+                  >
+                    <CloseIcon />
+                  </Button>
                 </div>
               </form>
             ) : (
@@ -94,26 +106,37 @@ export default function TaskList({
                   </span>
                 </div>
                 <div className="part2">
-                  <button onClick={() => startEditing(list)} className="icons">
-                    <FaPen />
-                  </button>
-                  <button
+                  <Button
+                    margin="2px 1rem"
+                    fontSize="20px"
+                    colorScheme="whatsapp"
+                    variant="outline"
+                    onClick={() => startEditing(list)}
+                    className="icons"
+                  >
+                    <EditIcon />
+                  </Button>
+                  <Button
+                    margin="2px 1rem"
+                    fontSize="20px"
+                    colorScheme="red"
+                    variant="outline"
                     onClick={() => deleteList(list.id)}
                     className="icons1"
                   >
-                    <FaTrashAlt />
-                  </button>
+                    <DeleteIcon />
+                  </Button>
                 </div>
-                <div className="description">
-                  <p>
-                    <span>{list.description}</span>
-                  </p>
+                <div>
+                  <Text fontSize="xl" margin="auto 3.5rem">
+                    {list.description}
+                  </Text>
                 </div>
               </>
             )}
-          </li>
+          </h2>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
