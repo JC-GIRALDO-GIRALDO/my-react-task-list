@@ -1,7 +1,11 @@
+import { Heading } from "@chakra-ui/react";
+
 export default function Header({ nameTaskList }) {
   return (
     <>
-      <h2>{nameTaskList}</h2>
+      <Heading as="h2" size="4xl" noOfLines={1}>
+        {nameTaskList}
+      </Heading>
     </>
   );
 }

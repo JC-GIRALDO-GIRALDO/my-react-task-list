@@ -1,27 +1,11 @@
 .container {
-  max-height: auto;
-  width: 250px;
+  max-width: 600px;
   margin: 3rem auto;
-  border-radius: 10px;
-  border-style: groove;
-  border-width: 4px;
   display: grid;
   grid-template-rows: auto auto;
 }
 header {
-  max-width: 238px;
   margin: 0.3rem;
-  border-radius: 5px;
-  border-style: groove;
-  background-color: darkslategrey;
-}
-header h2 {
-  font-size: 40px;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0.3rem;
-  text-align: start;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 form {
   margin: auto;
@@ -32,141 +16,46 @@ form {
 }
 .formPart1 {
   display: grid;
-  grid-template-columns: 80% 10%;
+  grid-template-columns: 80% 20%;
 }
-.formPart2 {
-  display: grid;
-  grid-template-rows: auto auto;
-}
-.error {
-  color: darkred;
-  font-size: 10px;
-  margin-left: 3px;
-}
-form input {
-  background-color: rgba(0, 0, 0, 0.7);
+section h2 {
+  background-color: rgba(108, 105, 105, 0.297);
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.9);
-  cursor: pointer;
-}
-form input::placeholder {
-  color: rgba(255, 255, 255, 0.9);
-}
-form input:focus {
-  outline: none;
-}
-form button .icons {
-  font-size: 20px;
-  color: darkorange;
-}
-
-section {
-  height: 250px;
-  max-width: 241px;
-  margin: 0.2rem;
-  border-radius: 5px;
-  border-style: groove;
-  background-color: darkslategray;
-}
-section button {
-  background-color: transparent;
-  border: none;
-  padding: 2px 2px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-section p {
-  color: black;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 2px;
-}
-section hr {
-  height: 2px;
-  margin: 0;
-}
-section ul {
-  max-width: auto;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  margin: 0.1rem auto;
-  padding: 0;
-  display: grid;
-  grid-template-rows: auto auto;
-}
-section li {
-  max-width: 240px;
-  height: auto;
-  font-size: 0.6em;
-  border-bottom: 2px solid darkslategrey;
-  color: rgba(255, 255, 255, 0.9);
-  list-style-type: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 0.4rem;
+  font-size: 25px;
   display: grid;
   grid-template-columns: 80% 20%;
 }
-
+.formEdit {
+  display: grid;
+  grid-template-columns: 100% auto;
+}
 .part1 {
   display: grid;
   grid-template-columns: 12% 80%;
+}
+.checkbox {
+  margin: 0 auto;
+  width: 30px;
 }
 .part2 {
   display: grid;
   grid-template-columns: 50% 50%;
 }
-.checkbox {
-  margin: auto;
-  width: 12px;
-  cursor: pointer;
-}
-.icons {
-  width: 10px;
-  margin-left: 3px;
-  color: darkorange;
-}
-.icons1 {
-  color: firebrick;
-}
 .edit {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 100% auto;
-}
-.description p {
-  width: auto;
-  margin: 0;
-  max-width: 200px;
-  max-height: auto;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 2px;
-}
-.description p span {
-  width: auto;
-  margin: 0;
-  max-width: 200px;
-  color: ghostwhite;
-}
-textarea {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: rgba(255, 255, 255, 0.9);
-}
-textarea::placeholder {
-  color: darkorange;
+  grid-template-columns: auto auto;
 }
 .clearAll {
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: 80% 20%;
 }
-.clearAll button {
-  background-color: firebrick;
-  font-size: 10px;
-  margin: auto;
-}
 .task-list {
-  max-height: 150px;
+  max-height: 400px;
   overflow-y: hidden;
 }
-
 .task-list:hover {
   overflow-y: auto;
 }
@@ -201,8 +90,9 @@ textarea::placeholder {
   height: 850px;
 }
 .home h2 {
+  border-radius: 5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: darkcyan;
+  background-color: rgba(108, 105, 105, 0.297);
   padding: 0;
   margin: 2rem;
   font-size: 30px;
@@ -216,8 +106,9 @@ textarea::placeholder {
   height: 850px;
 }
 .sobreNosotros h2 {
+  border-radius: 5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: darkcyan;
+  background-color: rgba(108, 105, 105, 0.297);
   padding: 0;
   margin: 2rem;
   font-size: 30px;
@@ -243,8 +134,9 @@ textarea::placeholder {
   height: 850px;
 }
 .nameTareas {
+  border-radius: 5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: darkcyan;
+  background-color: rgba(108, 105, 105, 0.297);
   padding: 0;
   margin: 2rem;
   font-size: 30px;
