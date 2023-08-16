@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { EditIcon, DeleteIcon, CloseIcon, CheckIcon } from "@chakra-ui/icons";
-import { Text, Divider, Checkbox, Button, Input } from "@chakra-ui/react";
+import { Text, Divider, Button, Input } from "@chakra-ui/react";
 
 const strikeThrough = (text) => {
   return text
