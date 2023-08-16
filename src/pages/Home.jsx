@@ -1,12 +1,14 @@
+import { Divider, Heading, Text } from "@chakra-ui/react";
+
 function Home() {
   return (
     <>
-      <hr />
+      <Divider orientation="horizontal" border="2px solid black" />
       <div className="home">
-        <h2>Bienvenido a Mi Aplicación de Tareas</h2>
-        <p>
+        <Heading>Bienvenido a Mi Aplicación de Tareas</Heading>
+        <Text>
           Administra tus tareas de manera eficiente y mantén todo bajo control.
-        </p>
+        </Text>
       </div>
     </>
   );

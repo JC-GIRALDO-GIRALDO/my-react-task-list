@@ -3,7 +3,7 @@ import { Button, useColorMode } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 function DarkLight() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { toggleColorMode } = useColorMode();
 
   return (
     <div className="darkLight">

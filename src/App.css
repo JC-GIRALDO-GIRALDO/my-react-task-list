@@ -78,7 +78,6 @@ section h2 {
   font-size: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .darkLight {
   display: flex;
   align-self: flex-end;
@@ -116,14 +115,6 @@ section h2 {
 .sobreNosotros p {
   padding: 0;
   margin: 2rem;
-  font-size: 20px;
-}
-.sobreNosotros ol {
-  padding: 0;
-  margin: 2rem;
-}
-.sobreNosotros h3 {
-  padding: 0;
   font-size: 20px;
 }
 .sobreNosotros li {
